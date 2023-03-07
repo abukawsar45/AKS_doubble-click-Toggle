@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKS</title>
+    <style>
+        h1{
+            padding: 5px;
+            justify-content: center;
+            text-align: center;
+            color: blueviolet;
+        }
+        .icon{
+            border: solid 1vh rgb(33, 174, 220);
+            padding: 2px;
+            height: 20px;
+            width: 20px;
+        }
+        .toggle{
+            border: solid 1vh rgb(206, 25, 187);
+            padding: 2px;
+            height: 20px;
+            width: 20px;
+
+        }
+        .icon-div{
+            padding: 15px;
+        }
+        .text-field{
+            justify-content: center;
+            text-align: center;
+            border: solid 2px aqua;
+            padding: 40px;
+        }
+        .clear-btn{
+            background-color: rgb(120, 101, 227);
+            color: aliceblue;
+            border-radius: 4px;
+            padding: 1px 9px;
+        }
+        .clear-btn :hover{
+            background-color: brown;
+        }
+        .italic{
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Assalamualaikum,,</h1>
+    </header>
+    <main>
+        <div class="text-field">
+            <div id="icon-btn" onclick="italicText()" class="icon-div">
+                <img id="icon" class="icon" src="./img/italic-solid.svg" alt="">
+            </div>
+            <div>
+                <textarea class="" name="" id="text-field" cols="60" rows="10" placeholder="write an article"></textarea>
+                <button id="clear-btn" onclick="clearTextField()" class="clear-btn">clear</button>
+                
+            </div>
+        </div>
+
+    </main>
+    <script>
+        // document.getElementById('text-field')
+        const inputField = document.getElementById('text-field')
+        const italicIcon = document.getElementById('icon')
+        const clearTextField =()=>{
+            document.getElementById('text-field').value = '';
+        }
+        const italicText =() =>{
+            const inputValue = inputField;
+            // console.log(inputValue)
+            inputValue.classList.toggle('italic')
+            italicIcon.classList.toggle('toggle')
+        }
+    </script>
+</body>
+</html>
